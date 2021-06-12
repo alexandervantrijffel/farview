@@ -53,3 +53,6 @@ build
 
 # docker secrets
 **/*_secret
+
+# express session store
+.sessions

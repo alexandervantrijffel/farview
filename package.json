@@ -6,8 +6,8 @@
   "scripts": {
     "comment": ".js is omitted as this is continuously updated",
     "lint": "eslint \"src/**/*.ts\"",
-    "start": "ts-node-dev --respawn --pretty --transpile-only src/index.ts",
-    "start:watch": "nodemon --ext 'ts,tsx,json' --watch '**' --exec 'ts-node src/index.ts'",
+    "start": "DEBUG=express:* ts-node-dev --respawn --pretty --transpile-only src/index.ts",
+    "start:watch": "nodemon --ext 'ts,tsx,json' --watch '**' --exec 'DEBUG=express:* ts-node src/index.ts'",
     "start:debug": "nodemon --inspect 'src/index.ts'",
     "postinstall": "husky install",
     "prebuild": "rimraf build/",
