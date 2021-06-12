@@ -13,5 +13,5 @@
     "typeRoots": ["./src/@types", "./node_modules/@types"]
   },
   "lib": ["es2015", "ESNext.AsyncIterable"],
-  "exclude": ["node_modules"]
+  "exclude": ["types", "node_modules"]
 }

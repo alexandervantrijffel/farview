@@ -14,3 +14,6 @@ import log from './log'
     .then(() => log.info(`⚡️ server started on http://localhost:${port}`, { logRocketAppId: appId }))
     .catch((err: unknown) => log.error('Server failed with error ', err))
 })()
+
+import photos from './googlePhotos'
+photos()

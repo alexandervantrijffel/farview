@@ -25,9 +25,14 @@ function getGoogleAuthURL() {
     access_type: 'offline',
     response_type: 'code',
     prompt: 'consent',
-    scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'].join(
-      ' '
-    )
+    scope: [
+      'https://www.googleapis.com/auth/userinfo.profile',
+      'https://www.googleapis.com/auth/userinfo.email',
+      'https://www.googleapis.com/auth/photoslibrary',
+      'https://www.googleapis.com/auth/photoslibrary.appendonly',
+      'https://www.googleapis.com/auth/photoslibrary.edit.appcreateddata',
+      'https://www.googleapis.com/auth/photoslibrary.sharing'
+    ].join(' ')
   }
 
   return `${rootUrl}?${querystring.stringify(options)}`
@@ -42,7 +47,7 @@ router.get('/login', (_req, res) => {
 })
 
 router.get(`/${redirectURI}`, async (req: Request, res: Response): Promise<void> => {
-  const token = await getToken(String(req.query.code))
+  const token = await getSignedGoogleUser(String(req.query.code))
   res.cookie('google_token', token, {
     maxAge: 900000,
     httpOnly: true,
@@ -52,8 +57,16 @@ router.get(`/${redirectURI}`, async (req: Request, res: Response): Promise<void>
   res.redirect(envString('SERVER_ROOT_URI'))
 })
 
-async function getToken(code: string) {
+async function getSignedGoogleUser(code: string) {
   const { tokens } = await oauth2Client.getToken(code)
+  log.debug('got access_token', { access_token: tokens.access_token })
+
+  // console.log(
+  //   'verifying id token',
+  //   await oauth2Client.verifyIdToken({
+  //     idToken: String(tokens.id_token)
+  //   })
+  // )
 
   // Fetch the user's profile with the access token and bearer
   const googleUser = await axios
