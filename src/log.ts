@@ -1,5 +1,4 @@
 import winston, { format, transports } from 'winston'
-import path from 'path'
 import { envString } from './env'
 
 const logFormat = format.printf((info) => {

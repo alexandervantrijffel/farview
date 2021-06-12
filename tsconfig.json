@@ -7,9 +7,10 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "rootDir": "./",
-    "outDir": "build",
+    "outDir": "dist",
     "strict": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    "typeRoots": ["./src/@types", "./node_modules/@types"]
   },
   "lib": ["es2015", "ESNext.AsyncIterable"],
   "exclude": ["node_modules"]

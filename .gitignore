@@ -56,3 +56,5 @@ build
 
 # express session store
 .sessions
+
+**/*.bak
