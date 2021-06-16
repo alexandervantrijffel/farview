@@ -1,0 +1,22 @@
+curl 'https://content-photoslibrary.googleapis.com/v1/albums' \
+  -H 'authority: content-photoslibrary.googleapis.com' \
+  -H 'pragma: no-cache' \
+  -H 'cache-control: no-cache' \
+  -H 'sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"' \
+  -H 'x-goog-encode-response-if-executable: base64' \
+  -H 'x-origin: https://explorer.apis.google.com' \
+  -H 'x-clientdetails: appVersion=5.0%20(X11%3B%20Linux%20x86_64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F91.0.4472.101%20Safari%2F537.36&platform=Linux%20x86_64&userAgent=Mozilla%2F5.0%20(X11%3B%20Linux%20x86_64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F91.0.4472.101%20Safari%2F537.36' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'authorization: Bearer ****SNIP****' \
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36' \
+  -H 'x-requested-with: XMLHttpRequest' \
+  -H 'x-javascript-user-agent: apix/3.0.0 google-api-javascript-client/1.1.0' \
+  -H 'x-referer: https://explorer.apis.google.com' \
+  -H 'accept: */*' \
+  -H 'x-client-data: CIe2yQEIorbJAQipncoBCK/QygEI947LAQigoMsBCIHyywEI3fLLAQiN9csBGI6eywE=' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://content-photoslibrary.googleapis.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_GB.e0zmNYwRirY.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCOwZVd7GHtTCczV_JXbP7WbEEQ7IQ%2Fm%3D__features__' \
+  -H 'accept-language: en,en-US;q=0.9,nl;q=0.8,de;q=0.7' \
+  --compressed
