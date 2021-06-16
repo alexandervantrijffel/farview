@@ -5,5 +5,6 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': 'ts-jest'
   },
-  coverageReporters: ['html', 'lcov']
+  coverageReporters: ['html', 'lcov'],
+  setupFiles: ['./jest.setup.ts']
 }

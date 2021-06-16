@@ -12,3 +12,8 @@ describe('env', () => {
     return expect(envString.bind(null, name)).toThrowError(`environment variable '${name}'`)
   })
 })
+
+test('expect test environment', () => {
+  const result = envString('NODE_ENV')
+  expect(result).toEqual('test')
+})
