@@ -48,7 +48,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "googleapis": "76.0.0",
-    "husky": "6.0.0",
+    "husky": "7.0.4",
     "jest": "27.0.4",
     "prettier": "2.3.1",
     "prettier-standard": "16.4.1",
