@@ -50,7 +50,7 @@
     "googleapis": "76.0.0",
     "husky": "6.0.0",
     "jest": "27.0.4",
-    "prettier": "2.3.1",
+    "prettier": "2.8.8",
     "prettier-standard": "16.4.1",
     "rimraf": "3.0.2",
     "ts-jest": "27.0.3",
